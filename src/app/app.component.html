@@ -1,0 +1,24 @@
+<nav class="navbar navbar-inverse ms-navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">AppLite</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a [routerLink]="['home']">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" [routerLink]="['deals']">Deals
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Create Deal</a></li>
+            <li><a href="#">Deal Closure</a></li>
+            <li><a href="#">Edit Deal</a></li>
+          </ul>
+        </li>
+        <li><a [routerLink]="['groups']">Groups</a></li>
+        <li><a [routerLink]="['users']">Users</a></li>
+      </ul>
+    </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
