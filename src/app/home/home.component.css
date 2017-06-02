@@ -1,0 +1,20 @@
+.home-gallery {
+    min-height: 300px;
+    width: 300px;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.grid-tab {
+    font-size: 8em;
+}
+
+.grid-label {
+    font-size: 18px;
+}
+
+.grid-icon {
+    display: table-cell;
+    vertical-align: middle;
+}

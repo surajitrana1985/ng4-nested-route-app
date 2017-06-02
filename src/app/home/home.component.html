@@ -1,12 +1,24 @@
 <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
     <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 menu-btn-tab">
-        <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-                <span class=""></span>
+        <div class="col-xs-6 col-md-3 col-lg-3 col-sm-3 pull-left">
+            <a [routerLink]="['admin']" class="thumbnail home-gallery">
+                <div class="row">
+                    <label class="grid-label">Admin</label>
+                </div>
+                <div class="row grid-icon">
+                    <span class="fa fa-user grid-tab"></span>
+                </div>
             </a>
         </div>
-    </div>
-    <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 menu-btn-tab">
-        Participants View
+        <div class="col-xs-6 col-md-3 col-lg-3 col-sm-3 pull-right">
+            <a [routerLink]="['participant']" class="thumbnail home-gallery">
+                <div class="row">
+                    <label class="grid-label">Participants</label>
+                </div>
+                <div class="row grid-icon">
+                    <span class="fa fa-users grid-tab"></span>
+                </div>
+            </a>
+        </div>
     </div>
 </div>

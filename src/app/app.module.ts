@@ -12,14 +12,15 @@ import { AboutComponent } from './about/about.component';
 import { DealsComponent } from './deals/deals.component';
 import { ColumnComponent } from './core/components/column/column.component';
 import { DataTableComponent } from './core/components/data-table/data-table.component';
+import { AdminComponent, routes as childRoutes } from './admin/admin.component';
+import { ParticipantComponent } from './participant/participant.component';
 
 const routes:Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'deals', component: DealsComponent },
-  { path: 'groups', component: GroupsComponent },
-  { path: 'users', component: UsersComponent }
+  { path: '', component: HomeComponent },
+  { path: 'admin', component: AdminComponent, children: childRoutes },
+  { path: 'participant', component: ParticipantComponent }
 ];
+
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ const routes:Routes = [
     AboutComponent,
     DealsComponent,
     ColumnComponent,
-    DataTableComponent
+    DataTableComponent,
+    AdminComponent,
+    ParticipantComponent
   ],
   imports: [
     BrowserModule,
