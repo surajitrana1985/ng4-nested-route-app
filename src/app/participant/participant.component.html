@@ -1,3 +1,9 @@
-<p>
-  participant works!
-</p>
+<div class="container">
+  <h2>Participants</h2>
+  <ul class="progressbar">
+    <li [ngClass]="{'active': step.isActive === true}" *ngFor="let step of stepInfo" [style.width]="getStepWidth()" (click)="listClick($event, step)"><a [routerLink]="[step.route]">{{step.name}}</a></li>
+  </ul>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

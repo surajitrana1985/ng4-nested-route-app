@@ -12,13 +12,18 @@ import { AboutComponent } from './about/about.component';
 import { DealsComponent } from './deals/deals.component';
 import { ColumnComponent } from './core/components/column/column.component';
 import { DataTableComponent } from './core/components/data-table/data-table.component';
-import { AdminComponent, routes as childRoutes } from './admin/admin.component';
-import { ParticipantComponent } from './participant/participant.component';
+import { AdminComponent, routes as adminRoutes } from './admin/admin.component';
+import { ParticipantComponent, routes as participantRoutes } from './participant/participant.component';
+import { WelcomeComponent } from './participant/welcome/welcome.component';
+import { DisclosureComponent } from './participant/disclosure/disclosure.component';
+import { DealComponent } from './participant/deal/deal.component';
+import { ForeclosureComponent } from './participant/foreclosure/foreclosure.component';
+import { ExitComponent } from './participant/exit/exit.component';
 
 const routes:Routes = [
   { path: '', component: HomeComponent },
-  { path: 'admin', component: AdminComponent, children: childRoutes },
-  { path: 'participant', component: ParticipantComponent }
+  { path: 'admin', component: AdminComponent, children: adminRoutes },
+  { path: 'participant', component: ParticipantComponent, children: participantRoutes }
 ];
 
 
@@ -33,7 +38,12 @@ const routes:Routes = [
     ColumnComponent,
     DataTableComponent,
     AdminComponent,
-    ParticipantComponent
+    ParticipantComponent,
+    WelcomeComponent,
+    DisclosureComponent,
+    DealComponent,
+    ForeclosureComponent,
+    ExitComponent
   ],
   imports: [
     BrowserModule,
